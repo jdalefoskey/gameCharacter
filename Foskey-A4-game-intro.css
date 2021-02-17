@@ -1,0 +1,25 @@
+body {
+  /* This is where i set page perameters like the background picture, font, and text color*/
+  background-image: url("backgroundImage.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  color: white;
+  font-family: georgia;
+  margin-left: 10px;
+}
+
+img {
+  /* This is where i positioned the picture and adjusted some properties of just the picture*/
+  float: right;
+  border-radius: 40px;
+  border: solid black;
+  width: 300px;
+  height: 300px;
+}
+
+h1 {
+  /* This is where i centered this text on the page*/
+  text-align: center;
+}
