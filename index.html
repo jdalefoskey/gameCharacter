@@ -1,0 +1,100 @@
+<!--
+        Johnny Foskey
+        2/26/21
+        CTI-110
+        This file is the primary html file 
+        IPO for game_intro
+            Inputs:         CharName, CharType, expTokens, healthTokens, supplyTokens
+            Processing:     Get CharName, CharType, expTokens, healthTokens, and supplyTokens from user
+                            Calculate total health tokens,
+                            calculate total expTokens,
+                            calculate total supplyTokens,
+                            calculate total cost
+                            Display the output ( Is this necessary if we are submitting also? )
+                            Submit output to game-intro.php for processing
+            Outputs:        CharName, CharType, healthTokens, expTokens,supplyTokens,total cost
+        Algorithm for game_intro.html  
+        prompt for CharName
+        get characterName
+        prompt for CharType
+        get CharType
+        prompt for expTokens
+        get expTokens
+        prompt for healthTokens
+        get healthTokens
+        prompt for supplyTokens
+        get supplyTokens
+        submint CharName,CharType,expTokens,healthTokens,supplyTokens to game-intro.php 
+        End
+       Algorithm for game_intro.php
+        Receive CharName,CharType,expTokens,healthTokens,supplyTokens from game-intro.html
+        totalCost = totalExperienceTokens / 2 + totalHealthTokens / 10 + totalSupplyTokens / 25
+        Display CharName,CharType,totalExperienceTokens,totalHealthTokens,totalSupplyTokens,totalCost
+        End
+    -->
+
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="Foskey-A4-game-intro.css"> <!-- This is where i import the css styles-->
+        <title>Character Creation</title>
+    </head>
+    <body>
+        <h1>Character Creation</h1>
+        <p>YOU HAVE 10 GOLD PIECES</p>
+        <P>1 gold piece buys 10 health tokens</P>
+        <p>1 gold piece buys 2 experience tokens</p>
+        <p>1 gold piece buys 10 supply tokens</p>
+        <img src="Foskey-A4-image.jpg" alt="character creation picture">  <!-- This is where i imported my picture-->
+        <form action="Foskey-A4-game-intro.php" method="post">  <!-- This is the beginning of the form-->
+            <p>Enter your character's name:
+                <input type = "text" size = "20" name = "charName"></p>  <!--This is the text input box for the characters name -->
+                <p>Select your character's type:  <!-- This is where we select the character type from a drop down list -->
+                    <select name = "charType">
+                        <option>Dwarf</option>
+                        <option>Elf</option>
+                        <option>Human</option>
+                        <option>Wizard</option>
+                    </select>
+                </p>
+                <p>Purchase health tokens:  <!-- This is where we select health tokens from a drop down list -->
+                    <select name = "healthTokens">
+                        <option>0</option>
+                        <option>10</option>
+                        <option>20</option>
+                        <option>30</option>
+                    </select>
+                </p>
+                <p>Purchase experience tokens:  <!-- This is where we select experience tokens from a drop down list -->
+                    <select name = "expTokens">
+                        <option>0</option>
+                        <option>2</option>
+                        <option>4</option>
+                        <option>6</option>
+                        <option>8</option>
+                        <option>10</option>
+                    </select>
+                </p>
+                <p>Purchase supply tokens:  <!-- This is where we select supply tokens from a drop down list -->
+                    <select name = "supplyTokens">
+                        <option>0</option>
+                        <option>25</option>
+                        <option>50</option>
+                        <option>75</option>
+                        <option>100</option>
+                    </select>
+                </p>
+                <p><input type = "submit" value = "Create Character"> <!-- This is the submit button that will submit the selected criteria to the php file for processing -->
+                    <input type = "reset" value = "Clear the form">
+              </p>
+              
+            
+    
+        </form>
+        
+    </body>
+    </html>
